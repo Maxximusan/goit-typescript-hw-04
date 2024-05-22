@@ -1,5 +1,18 @@
 import React, {useReducer} from "react";
 
+type RequestStep = string
+
+interface State{
+  isRequestInProgress: boolean;
+  requestStep: RequestStep 
+
+}
+
+interface Action {
+  type: string;
+}
+
+
 const initialState: State = {
   isRequestInProgress: false,
   requestStep: 'idle',
